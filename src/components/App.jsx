@@ -10,7 +10,7 @@ function App() {
   const [bad, setBadFeedback] = useState(0);
 
   const clickHandler = (event) => {
-    const key = event.target.id;
+    const key = event.target.innerText;
     switch (key) {
       case 'good':
         setGoodFeedback(prev => prev + 1);
@@ -21,7 +21,7 @@ function App() {
       case 'bad':
         setBadFeedback(prev => prev + 1)
         break;
-      default: console.log('hi')
+      default: return
     }
   }
 
